@@ -13,7 +13,7 @@ class TalksPage extends Component {
     // Get Talks Data from si-glyph-screw-driver.
     let talkID = this.props.match.params.talkID;
     console.log(talkID);
-    axios.get(`http://127.0.0.1:8000/api/talks/${talkID}`)
+    axios.get(`https://talky-react.herokuapp.com/api/talks/${talkID}`)
       .then(res => {
         this.feedback = res.data;
         this.setState({
